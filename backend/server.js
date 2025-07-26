@@ -10,7 +10,7 @@ const port = process.env.PORT || 9000;
 app.use(express.json());
 app.use("/api/todos", todoRoutes);
 
-app.listen(port, () => {
-	connectDB();
-	console.log(`Server started at http://localhost:${port}`);
+app.listen(port, '0.0.0.0', () => {
+  connectDB();
+  console.log(`Server started at http://0.0.0.0:${port}`);
 });
